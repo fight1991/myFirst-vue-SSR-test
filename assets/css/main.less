@@ -1,0 +1,125 @@
+.www {
+  // 公共样式
+   ol, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, a, img, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    /* css3 盒子模型, 好处: 设置宽高后, 如果有padding或者border 自动内减 */
+    box-sizing: border-box;
+  }
+  article, aside, footer, header, nav, section {
+    display: block;
+  }
+
+  ul,ol{
+    list-style:none;
+  }
+
+  a,
+  a:hover,
+  a:active,
+  a:link{
+    font-family: 'microsoft yahei';
+    text-decoration: none;
+    /* 取消链接高亮 tap 轻触  */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #333;
+  }
+  img {
+    width: 100%;
+    /*解决图片底部对齐问题*/
+    display: block;
+    border: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+  }
+
+  /* 解决图片下面留白的问题 */
+  img {
+      vertical-align: top;
+  }
+
+  em, i, u {
+      font-style: normal;
+  }
+
+  /*去除边框*/
+  // fieldset, img, input, button, textarea {
+  //   border: none;
+  //   /*去除的蓝色小边框*/
+  //   outline-style: none;
+  // }
+
+  textarea {
+    resize: none;
+    -webkit-appearance: none;
+  }
+
+  .fl{
+    float: left;
+  }
+
+  .fr{
+    float: right;
+  }
+
+  .txt-cut {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* display: -webkit-box; */
+    /* 必须结合的属性 ，将对象作为弹性伸缩盒子模型显示 。	 */
+    
+    /* -webkit-box-orient: vertical; */
+    /* 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式 。 */
+
+    /* -webkit-line-clamp: 2; */
+    /* 用来限制在一个块元素显示的文本的行数。 为了实现该效果，它需要组合其他的WebKit属性。 */
+
+  }
+
+  /* 超出两行隐藏 */
+  .txt-cut-2{
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 2; /** 显示的行数 **/
+    overflow: hidden; /** 隐藏超出的内容 **/
+  }
+  /* 超出3行隐藏 */
+  .txt-cut-3{
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 3; /** 显示的行数 **/
+    -moz-box-orient: vertical;
+    -moz-line-clamp: 3;
+    overflow: hidden; /** 隐藏超出的内容 **/
+  }
+
+
+  /* 清除浮动 */
+  .clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+  }
+
+  .clearfix {
+      *zoom: 1;
+  }
+
+  ::before,
+  ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
