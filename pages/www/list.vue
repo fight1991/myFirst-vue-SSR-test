@@ -1,6 +1,13 @@
 <template>
   <div class="container">
-    我是首页
+    <el-row>
+      <el-table size="mini" :data="tableList" border>
+        <el-table-column prop="imageText" min-width="150" label="123"></el-table-column>
+        <el-table-column prop="imageUrl" min-width="150" label="123"></el-table-column>
+        <el-table-column prop="linkUrl" min-width="150" label="123"></el-table-column>
+        <el-table-column prop="imageText" min-width="150" label="123"></el-table-column>
+      </el-table>
+    </el-row>
   </div>
 </template>
 

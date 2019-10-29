@@ -1,4 +1,3 @@
-import Vue from 'vue'
 import axios from 'axios'
 const myAxios = axios.create()
 myAxios.defaults.timeout = 60000 // 请求的超时时间
@@ -17,7 +16,8 @@ myAxios.interceptors.request.use(config => {
   return config
 }, (error) => {
   // 对请求错误做些什么
-  Vue.prototype.$message({type: 'error', message: error})
   return Promise.reject(error)
 })
-Vue.prototype.axios = myAxios
+export default ({app}, inject) => {
+  app.axios = myAxios
+}
