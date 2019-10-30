@@ -22,16 +22,9 @@ export default {
     }
   },
   created() {
-    console.log('哈哈')
+    console.log('列表页2')
   },
   async asyncData(context) {
-    let {data} = await context.app.axios.post('/plat-manager/carouselManager/showCarousel',
-        {code: 'CONFIG:CCBA_FIRST_PAGE'})
-      if (data.code === '0000') {
-        return {
-          tableList: data.result
-        }
-      }
   },
   methods: {
     async getBanner() {

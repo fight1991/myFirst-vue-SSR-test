@@ -3,7 +3,7 @@ const myAxios = axios.create()
 myAxios.defaults.timeout = 60000 // 请求的超时时间
 myAxios.defaults.baseURL = 'https://test.5itrade.cn'
 myAxios.defaults.headers.common = {
-  'ssoToken': window.localStorage.getItem('token') || '',
+  'ssoToken': '',
   'X-Requested-With': 'XMLHttpReques'
 }
 myAxios.interceptors.request.use(config => {

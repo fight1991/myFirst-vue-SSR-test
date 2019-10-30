@@ -1,8 +1,8 @@
 <template>
   <div class="header">
-    <nuxt-link to="/">首页</nuxt-link>
-    <nuxt-link to="/www/list">列表页</nuxt-link>
-    <nuxt-link to="/www/detail">详情页</nuxt-link>
+    <nuxt-link to="/">我是列表</nuxt-link>
+    <nuxt-link to="/www/list">我是查询页</nuxt-link>
+    <nuxt-link to="/www/detail">我是详情页</nuxt-link>
   </div>
 </template>
 <script>
